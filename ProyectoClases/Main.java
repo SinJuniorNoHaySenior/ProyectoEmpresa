@@ -4,14 +4,14 @@ import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
 
-    // Scanner entrada = new Scanner(System.in);
-    // String nombreUsuario;
-    // System.out.print("Nombre del usuario: ");
-    // nombreUsuario = entrada.nextLine();
-    // System.out.println("El nombre es: " + nombreUsuario);
+    Scanner entrada = new Scanner(System.in);
+    String nombreUsuario;
+    System.out.print("Nombre del usuario: ");
+    nombreUsuario = entrada.nextLine();
+    System.out.println("El nombre es: " + nombreUsuario);
 
 
-    Empleado Alejandro = new Empleado("Alejandro Ule", "alejoule27@gmail.com","Google","Operador");
+    Empleado Alejandro = new Empleado(nombreUsuario, "alejoule27@gmail.com","Google","Operador");
     Empresa Software = new Empresa("Software","Cra 4 # 5B - 16","0180005968","84596214");
     MovimientoDinero Capital = new MovimientoDinero(100000.00,"Consignación","Alejandro Ule");
 
