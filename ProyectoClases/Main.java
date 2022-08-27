@@ -1,27 +1,35 @@
 import java.sql.SQLOutput;
+import java.util.Scanner;
 
-public class Main {
+class Main {
   public static void main(String[] args) {
 
-   Empleado empleado1=new Empleado( "correo @gmail", "empresa", "rol");
-   Empresa empresa1=new Empresa("nombre", "dirección", "teléfono", "nit");
-   MovimientoDinero monDinero=new MovimientoDinero(100.000, "Concepto Movimiento", "Usuario");
+    // Scanner entrada = new Scanner(System.in);
+    // String nombreUsuario;
+    // System.out.print("Nombre del usuario: ");
+    // nombreUsuario = entrada.nextLine();
+    // System.out.println("El nombre es: " + nombreUsuario);
 
-   System.out.println("Digite el nombre del empleado: " +empleado1.getNombEmpleado());
-   System.out.println("El nombre del empleado es: " +empleado1.getNombEmpleado());
-   System.out.println("El correo del empleado es: " +empleado1.getCorreoEmpleado());
-   System.out.println("La empresa del empleado es: " +empleado1.getEmpEmpleado());
-   System.out.println("El rol del empleado es: " +empleado1.getRolEmpleado());
 
-    System.out.println("El nombre de la empresa es: " +empresa1.getNombEmpresa());
-    System.out.println("La dirección de la empresa es: " +empresa1.getDirEmpresa());
-    System.out.println("El teléfono de la empresa es: " +empresa1.getTelEmpresa());
-    System.out.println("El Nit de la empresa es: " +empresa1.getNitEmpresa());
+    Empleado Alejandro = new Empleado("Alejandro Ule", "alejoule27@gmail.com","Google","Operador");
+    Empresa Software = new Empresa("Software","Cra 4 # 5B - 16","0180005968","84596214");
+    MovimientoDinero Capital = new MovimientoDinero(100000.00,"Consignación","Alejandro Ule");
 
-    System.out.println("Monto: " +monDinero.getMonMovimiento());
-    System.out.println("Concepto: " +monDinero.getConcMovimiento());
-    System.out.println("Usuario: " +monDinero.getUsuario());
+    System.out.println("INFORMACIÓN EMPLEADO");
+    System.out.println("Nombre: " + Alejandro.getNombEmpleado());
+    System.out.println("e-mail: " + Alejandro.getCorreoEmpleado());
+    System.out.println("Empresa: " + Alejandro.getEmpEmpleado());
+    System.out.println("Rol: " + Alejandro.getRolEmpleado());
 
+    System.out.println("\n INFORMACIÓN EMPRESA");
+    System.out.println("Empresa: " + Software.getNombEmpresa());
+    System.out.println("Dirección: " + Software.getDirEmpresa());
+    System.out.println("Teléfono: " + Software.getTelEmpresa());
+    System.out.println("Nit: " + Software.getNitEmpresa());
+
+    System.out.println("\n MOVIMIENTOS DINERO");
+    System.out.println("Monto: " + Capital.getMonMovimiento());
+    System.out.println("Concepto: " + Capital.getConcMovimiento());
+    System.out.println("Usuario: " + Capital.getUsuario());
   }
-
 }

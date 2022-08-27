@@ -1,10 +1,10 @@
 public class Empleado{
-  private String nombEmpleado="";
-  private String correoEmpleado="";
-  private String empEmpleado="";
-  private String rolEmpleado="";
+  private String nombEmpleado = "" ;
+  private String correoEmpleado = "" ;
+  private String empEmpleado = "" ;
+  private String rolEmpleado = "" ;
 
-  public Empleado( System.in, String correoEmpleado, String empEmpleado, String rolEmpleado) {
+  public Empleado(String nombEmpleado, String correoEmpleado, String empEmpleado, String rolEmpleado) {
     this.nombEmpleado = nombEmpleado;
     this.correoEmpleado = correoEmpleado;
     this.empEmpleado = empEmpleado;
