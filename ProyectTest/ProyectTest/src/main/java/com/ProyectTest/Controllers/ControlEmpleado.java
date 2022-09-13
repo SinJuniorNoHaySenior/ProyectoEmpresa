@@ -14,7 +14,7 @@ public class ControlEmpleado {
     public ControlEmpleado(){
         this.Alejandro = this.SEmpleado.getEmpleado();
     }
-    @GetMapping("/InformacionEmpleado")
+    @GetMapping("/informacion-empleado")
     public Empleado InformacionEmpleado(){
         return this.Alejandro;
     }

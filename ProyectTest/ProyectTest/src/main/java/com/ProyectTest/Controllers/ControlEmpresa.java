@@ -15,7 +15,7 @@ public class ControlEmpresa {
         this.Software = this.SEmpresa.getEmpresa();
     }
 
-    @GetMapping("/InformacionEmpresa")
+    @GetMapping("/informacion-empresa")
     public Empresa InformacionEmpresa(){
          return this.Software;
     }
