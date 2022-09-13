@@ -14,8 +14,8 @@ public class ControlMovDinero {
     public ControlMovDinero(){
         this.Capital = this.SMovDinero.getCapital();
     }
-    @GetMapping("/MovimientoDinero")
-    public MovimientoDinero MovimientoDinero(){
+    @GetMapping("/enterprises/{id}/movements")
+    public MovimientoDinero enterprises(){
         return this.Capital;
     }
 }

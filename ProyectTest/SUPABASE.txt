@@ -1,0 +1,13 @@
+SUPABASE
+
+Organization: SinJuniorNoHaySenior
+Name: ProyectoTest
+Database Password: Jgc92022802560
+
+CONFIGURACION DATABASE
+
+Host: db.yszzivaptflnxdskccqa.supabase.co
+Database Name: postgres
+Port: 5432
+User: postgres
+

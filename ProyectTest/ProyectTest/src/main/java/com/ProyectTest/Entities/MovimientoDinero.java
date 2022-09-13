@@ -1,10 +1,22 @@
 package com.ProyectTest.Entities;
 
-public class MovimientoDinero {
+import javax.persistence.*;
 
+@Entity
+@Table(name="movimientodinero")
+public class MovimientoDinero {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    @Column(name="nombMovimiento")
     private Double monMovimiento;
+    @Column(name="concMovimiento")
     private String concMovimiento="";
+    @Column(name="usuario")
     private String usuario="";
+
+    public MovimientoDinero() {
+    }
 
     public MovimientoDinero(Double monMovimiento, String concMovimiento, String usuario) {
         this.monMovimiento = monMovimiento;

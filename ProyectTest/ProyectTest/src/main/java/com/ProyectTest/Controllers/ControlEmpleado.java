@@ -12,10 +12,11 @@ public class ControlEmpleado {
     Empleado Alejandro;
 
     public ControlEmpleado(){
+
         this.Alejandro = this.SEmpleado.getEmpleado();
     }
-    @GetMapping("/InformacionEmpleado")
-    public Empleado InformacionEmpleado(){
+    @GetMapping("/users")
+    public Empleado users(){
         return this.Alejandro;
     }
 }
