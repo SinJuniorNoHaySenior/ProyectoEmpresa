@@ -7,27 +7,41 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class ControlEmpresa {
+    /*
+        ServiceEmpresa SEmpresa = new ServiceEmpresa();
+        Empresa Software;
 
-    ServiceEmpresa SEmpresa = new ServiceEmpresa();
-    Empresa Software;
+        public ControlEmpresa(){
 
-    public ControlEmpresa(){
+            this.Software = this.SEmpresa.getEmpresa();
+        }
+        @GetMapping("/enterprises")
+        public Empresa enterprises(){
+            return this.Software;
+        }
+         // Crear otros métodos y probarlos desde el Postman o Insomnia
+        @PostMapping("/enterprises")
+        public Empresa crearEmpresa(RequestBody Empresa){
+            return this.SEmpresa.getEmpresa();
+        }
+     */
+    ServiceEmpresa SEmpresa;
 
-        this.Software = this.SEmpresa.getEmpresa();
+    public ControlEmpresa(ServiceEmpresa SEmpresa) {
+        this.SEmpresa = SEmpresa;
     }
-
-
 
     @GetMapping("/enterprises")
-    public Empresa enterprises(){
-        return this.Software;
-
+    public List<Empresa> enterprises() {
+        return this.SEmpresa.getRepositorio();
     }
-     // Crear otros métodos y probarlos desde el Postman o Insomnia
+
     @PostMapping("/enterprises")
-    public Empresa crearEmpresa(RequestBody Empresa){
-        return this.SEmpresa.getEmpresa();
+    public Empresa crearEmpresa(@RequestBody Empresa emp){
+        return this.SEmpresa.crearRegistro(emp);
     }
 }

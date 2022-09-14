@@ -1,5 +1,10 @@
 package com.ProyectTest.Services;
 import com.ProyectTest.Entities.Empleado;
+import com.ProyectTest.Entities.Empresa;
+import com.ProyectTest.Repositories.RepositorioEmpleado;
+import com.ProyectTest.Repositories.RepositorioEmpresa;
+
+import java.util.List;
 
 public class ServiceEmpleado {
 
@@ -13,5 +18,6 @@ public class ServiceEmpleado {
     public Empleado getEmpleado(){
         return this.Alejandro;
     }
+
 
 }
